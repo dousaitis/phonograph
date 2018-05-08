@@ -59,7 +59,7 @@ export default class Clip {
 		this.buffered = 0;
 		this.length = 0;
 
-		this.loader = new (window.fetch ? FetchLoader : XhrLoader)(url);
+		this.loader = new (window && window.fetch ? FetchLoader : XhrLoader)(url);
 		this.loaded = false;
 		this.canplaythrough = false;
 

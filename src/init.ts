@@ -2,7 +2,9 @@ import getContext from './getContext';
 
 let inited: boolean;
 
-window.addEventListener('touchend', init, false);
+if (window) {
+	window.addEventListener('touchend', init, false);
+}
 
 // https://paulbakaus.com/tutorials/html5/web-audio-on-ios/
 export default function init() {
@@ -25,7 +27,9 @@ export default function init() {
 				source.playbackState === source.FINISHED_STATE
 			) {
 				inited = true;
-				window.removeEventListener('touchend', init, false);
+				if (window) {
+					window.removeEventListener('touchend', init, false);
+				}
 			}
 		}
 	});
