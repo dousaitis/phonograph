@@ -5,11 +5,6 @@
   "main": "dist/phonograph.umd.js",
   "module": "dist/phonograph.es.js",
   "types": "src/index.d.ts",
-  "files": [
-    "src",
-    "dist",
-    "README.md"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://gitlab.com/Rich-Harris/phonograph.git"

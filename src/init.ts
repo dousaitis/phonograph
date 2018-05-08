@@ -2,7 +2,7 @@ import getContext from './getContext';
 
 let inited: boolean;
 
-if (window) {
+if (typeof window !== 'undefined') {
 	window.addEventListener('touchend', init, false);
 }
 
@@ -27,7 +27,7 @@ export default function init() {
 				source.playbackState === source.FINISHED_STATE
 			) {
 				inited = true;
-				if (window) {
+				if (typeof window !== 'undefined') {
 					window.removeEventListener('touchend', init, false);
 				}
 			}
